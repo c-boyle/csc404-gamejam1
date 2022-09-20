@@ -24,7 +24,7 @@ public class PlayerCollision : MonoBehaviour
             if (growthSize < size)
             {
                 size += growthSize;
-                // scoreManager.UpdateScore(edibleObject.Score);
+                scoreManager.addScore(edibleObject.Score);
                 
                 gameObject.transform.localScale = new Vector3(size, size, size);
                 gameObject.transform.position += new Vector3(0, growthSize / 2, 0);
